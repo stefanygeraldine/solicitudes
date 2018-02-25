@@ -1,0 +1,156 @@
+@import '../../scss/_general.scss';
+.request {
+    &__header {
+        height: 50px;
+        width: 100%;
+        background-color: $global-white;
+        box-shadow: 0 1px 0 0 $color-shadow;
+        padding: 0 15px;
+        margin-bottom: 40px;
+        &--left {
+            @include flex($item: center, $direction: row, $justify: flex-start);
+            height: 50px;
+            padding-left: 20px;
+            label {
+                @include font($size: 20px, $color: $font-list);
+                position: relative;
+                padding-left: 15px;
+                margin-left: 15px;
+                &:before {
+                    content: '';
+                    height: 28px;
+                    width: 1px;
+                    background-color: $date-color;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        &--right {
+            @include flex($item: center, $direction: row, $justify: flex-end);
+            height: 50px;
+            padding-right: 20px;
+            button {
+                background-color: transparent;
+                border: 0;
+            }
+            label {
+                @include font($size: 15px, $color: $blue-color, $weight: bold);
+            }
+        }
+    }
+    &__list {
+        padding: 0;
+        &--item {
+            @include flex($item: center, $direction: row, $justify: center);
+            width: 100%;
+            height: 87px;
+            margin-bottom: 16px;
+            position: relative;
+            &>div {
+                position: absolute;
+                opacity: 1;
+                left: 0%;
+                width: 100%;
+                padding: 15px 0;
+                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
+                background-color: $global-white;
+                @include flex($item: center, $direction: row, $justify: center);
+            }
+        }
+    }
+}
+
+.accept--request {
+    transition: 0.9s;
+    margin-bottom: 0;
+    height: 0;
+    &>div {
+        transition: 0.5s;
+        opacity: 0;
+        left: 15%;
+    }
+}
+
+.reject--request {
+    transition: 0.9s;
+    margin-bottom: 0;
+    height: 0;
+    &>div {
+        transition: 0.5s;
+        opacity: 0;
+        left: -15%;
+    }
+}
+
+.reject--inactive {
+    @include icon-list($bg: '../../static/images/lista_ppal/reject_inactive.png');
+    &:hover {
+        background-image: url('../../static/images/lista_ppal/reject_active.png');
+    }
+}
+
+.reject--active {
+    @include icon-list($bg: '../../static/images/lista_ppal/reject_active.png');
+}
+
+.accept--inactive {
+    @include icon-list($bg: '../../static/images/lista_ppal/accept_inactive.png');
+}
+
+.accept--active {
+    @include icon-list($bg: '../../static/images/lista_ppal/accept_active.png');
+}
+
+.flex {
+    @include flex($item: flex-start, $direction: column, $justify: center);
+    text-align: left;
+}
+
+.flex-center {
+    @include flex($item: center, $direction: row, $justify: center);
+}
+
+.title-bold {
+    @include font($size: 16px, $color: $tertiary-color, $weight: bold);
+}
+
+.title-regular {
+    @include font($size: 12px, $color: $font-list);
+}
+
+.title-cuit {
+    @include font($size: 16px, $color: $font-list);
+    span {
+        color: $tertiary-color;
+    }
+}
+
+.terminal {
+    @include font($size: 18px, $color: $tertiary-color);
+    width: 100%;
+    line-height: 35px;
+    border: 0;
+    border-bottom: solid 2px $color-border;
+    background-color: transparent;
+}
+
+.date {
+    @include font($size: 11px, $color: $global-white, $weight: bold);
+    background-color: $date-color;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .request {
+        &__list {
+            &--item {
+                height: auto;
+                &>div {
+                    position: relative;
+                }
+            }
+        }
+    }
+}

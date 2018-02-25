@@ -1,0 +1,25 @@
+@import '../../../scss/_general.scss';
+.content {
+    box-sizing: border-box;
+    background-color: $content-color;
+    padding: 125px;
+    &__title {
+        @include font($color: $primary-color, $size: 22px);
+        line-height: 30px;
+    }
+    &__text {
+        @include font($color: $global-text, $size: 20px);
+        line-height: 30px;
+        width: 489px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 50px;
+        &__text {
+            font-size: 16px;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@import '../../scss/_general.scss';
+.solicitud__admin {
+    [class^="col"],
+    [class*="col"] {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    height: 447px;
+    width: 450px;
+    margin: 80.41px auto;
+    padding-top: 64px;
+    position: relative;
+    padding: 92.5px 32.58px 30px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.14);
+    background-color: $global-white;
+    &--title {
+        @include font($size: 16px, $weight: bold, $color: $blue-color);
+        margin-top: 0;
+        border-bottom: solid 1px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+    }
+    &--group {
+        @include flex($direction: column, $item: flex-start);
+        margin-bottom: 10px;
+        .label {
+            @include font($size: 13px, $color: $tertiary-color);
+            line-height: 13px;
+            margin-bottom: 5px;
+        }
+        input {
+            @include font($size: 14px, $color: $tertiary-color);
+            height: 40px;
+            width: 100%;
+            padding: 12px 12px 12px 15px;
+            box-sizing: border-box;
+            border: 1px solid #CACACA;
+            border-radius: 2px;
+            background-color: $global-white;
+        }
+    }
+    &--button {
+        margin-top: 93.5px !important;
+        padding-top: 23.5px;
+        border-top: solid 1px $border-button;
+        width: 100%;
+    }
+    &--cancel {
+        @include font($color: $tertiary-color, $size: 17px);
+        @include button-modal($global-white);
+        border: solid 1px $border-button;
+    }
+    &--create {
+        @include font($color: $global-white, $size: 17px, $weight: bold);
+        @include button-modal();
+    }
+}
+
+.disabled-button {
+    opacity: 0.09;
+}
+
+.error {
+    @include font($size: 13px, $color: red);
+    background-color: #fff;
+    margin-bottom: 0px;
+    height: 18px;
+    text-align: left;
+}

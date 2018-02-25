@@ -1,0 +1,64 @@
+@mixin font($color:$global-white, $size:12px, $weight: normal) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    font-family: 'droid_sans_regular';
+}
+
+@mixin flex($justify: space-between, $wrap: nowrap, $item:center, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $item;
+    flex-wrap: $wrap;
+}
+
+@mixin confirm($weight: regular, $color:$blue-color) {
+    @include font($weight: $weight, $color: $color, $size: 14px);
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+        border-bottom: solid 1px $color;
+    }
+}
+
+@mixin button-modal($color:$blue-color) {
+    cursor: pointer;
+    height: 43px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $color;
+    border: solid 1px $color;
+}
+
+@mixin icon-list($bg) {
+    background-image: url($bg);
+    font-size: 0;
+    padding: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+}
+
+@mixin placeholder($color:$global-placeholder) {
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: $color;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: $color;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: $color;
+    }
+}

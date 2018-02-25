@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: 'droid_sans_regular';
+    src: url('./fonts/droidsans/regular/DroidSans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

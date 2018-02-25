@@ -1,0 +1,19 @@
+@import '_flexboxgrid.scss';
+@import '_mixins.scss';
+@import '_var.scss';
+//
+.row {
+    margin: 0 !important;
+}
+
+body {
+    background-color: $request-color;
+    padding: 0;
+    margin: 0;
+}
+
+[class^="col"],
+[class*="col"] {
+    padding-left: 0;
+    padding-right: 0;
+}

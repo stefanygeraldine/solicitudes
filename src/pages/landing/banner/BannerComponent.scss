@@ -1,0 +1,29 @@
+@import '../../../scss/_general.scss';
+.banner {
+    height: 529px;
+    padding: 67px 123px;
+    box-sizing: border-box;
+    background-image: url('../../../static/images/Inicio/Group.png');
+    background-size: cover;
+    &__logo {
+        height: 35px;
+        width: 105px;
+        opacity: 0.21
+    }
+    h1 {
+        @include font($size: 22px, $weight: bold);
+        line-height: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 50px;
+    }
+}

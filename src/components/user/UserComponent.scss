@@ -1,0 +1,24 @@
+@import '../../scss/_general.scss';
+.user {
+    border-bottom: solid 2px $global-white;
+    padding-bottom: 10px;
+    &__input {
+        @include font($size: 30px);
+        @include placeholder();
+        height: 35px;
+        width: 284px;
+        line-height: 35px;
+        border: 0;
+        background-color: transparent;
+    }
+    &__arrow {
+        cursor: pointer;
+        border: solid 2px #fff;
+        border-radius: 50%;
+        padding: 9.1px 8.6px 5.1px;
+    }
+}
+
+.hiddenButton {
+    display: none;
+}

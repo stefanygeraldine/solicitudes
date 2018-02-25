@@ -1,0 +1,18 @@
+@import '../../scss/_general.scss';
+//
+.confirm {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    &__message {
+        @include flex($item: center, $direction: row, $justify: space-around);
+        border: solid 1px red;
+        &--cancel {
+            @include confirm($color: $tertiary-color);
+        }
+        &--reject {
+            @include confirm($weight: bold);
+        }
+    }
+}

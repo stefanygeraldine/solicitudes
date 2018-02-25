@@ -1,0 +1,82 @@
+@import '../../scss/_general.scss';
+.solicitud__landing {
+    height: 447px;
+    width: 450px;
+    margin-top: 80.41px;
+    position: relative;
+    padding: 30px 32.58px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.14);
+    background: linear-gradient(138.15deg, #1A56FF 0%, #600FC0 100%);
+    &--title {
+        @include font($size: 22px, $weight: bold);
+        line-height: 45px;
+        text-transform: uppercase;
+    }
+    &--button {
+        @include font($size: 20px, $weight: bold);
+        cursor: pointer;
+        height: 74px;
+        width: 450px;
+        border: 0;
+        border-radius: 0 0 8px 8px;
+        bottom: 0;
+        background-color: $secundary-color;
+        position: absolute;
+        left: 0;
+        line-height: 24px;
+    }
+    &--group {
+        @include flex($direction: column, $item: flex-start);
+        margin-bottom: 10px;
+        .label {
+            @include font($size: 13px);
+            line-height: 13px;
+            margin-bottom: 5px;
+        }
+        input {
+            @include font($size: 14px, $color: $tertiary-color);
+            height: 40px;
+            width: 389.93px;
+            padding: 12px 12px 12px 15px;
+            box-sizing: border-box;
+            border: 1px solid #CACACA;
+            border-radius: 2px;
+            background-color: $global-white;
+        }
+    }
+}
+
+.disabled-button {
+    opacity: 0.09;
+}
+
+.error {
+    @include font($size: 13px, $color: red);
+    background-color: #fff;
+    margin-bottom: 0px;
+    height: 18px;
+}
+
+@media (max-width: 1024px) {
+    .solicitud__landing {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .solicitud__landing {
+        &--title {
+            font-size: 14px;
+        }
+        &--button {
+            width: 100%;
+        }
+        &--group {
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
