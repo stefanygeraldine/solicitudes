@@ -312,7 +312,8 @@ const generateRequest = (validation) => {
                 approveClass: false,
                 reject: false,
                 rejectClass: false,
-                date: today
+                date: today,
+                change: ONCHANGE_TERMINAL
 
             }
 
